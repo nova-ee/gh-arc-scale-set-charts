@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+    name: gha-runner-scale-set-controller
+    namespace: argocd
+
+spec:
+    destination:
+        server: https://kubernetes.default.svc
+        namespace: arc-systems
+    project: default
+    source:
+        repoURL: https://github.com/nova-ee/gh-arc-scale-set-charts.git
+        targetRevision: main
+        path: ./gha-runner-scale-set-controller
+    syncPolicy:
+        automated:
+            prune: true
+            selfHeal: true
+        syncOptions:
+            - CreateNamespace=true
