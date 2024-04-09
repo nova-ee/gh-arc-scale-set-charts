@@ -5,7 +5,7 @@ githubConfigUrl: "https://github.com/stellar-novas/Einstein-Engines/"
 
 ## githubConfigSecret is the k8s secrets to use when auth with GitHub API.
 ## You can choose to use GitHub App or a PAT token
-githubConfigSecret: arc-runners-secret
+#githubConfigSecret: arc-runners-secret
   ### GitHub Apps Configuration
   ## NOTE: IDs MUST be strings, use quotes
   #github_app_id: ""
@@ -199,6 +199,6 @@ template:
 ## In case the helm chart can't find the right service account, you can explicitly pass in the following value
 ## to help it finish RoleBinding with the right service account.
 ## Note: if your controller is installed to only watch a single namespace, you have to pass these values explicitly.
-controllerServiceAccount:
-  namespace: arc-system
-  name: actions-runner-controller-gha-rs-controller
+# controllerServiceAccount:
+#   namespace: arc-system
+#   name: actions-runner-controller-gha-rs-controller

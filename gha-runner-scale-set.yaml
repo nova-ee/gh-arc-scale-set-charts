@@ -14,14 +14,8 @@ spec:
         targetRevision: main
         path: ./gha-runner-scale-set
         helm:
-            values:
-                githubConfigUrl: "https://github.com/nova-ee"
-                githubConfigSecret: arc-runners-secret
-                maxRunners: 5
-                minRunners: 1
-                controllerServiceAccount:
-                    namespace: arc-systems
-                    name: actions-runner-controller-gha-rs-controller
+            valueFiles:
+              - values.yaml
         syncPolicy:
             automated:
                 prune: true
