@@ -4,7 +4,7 @@ githubConfigUrl: "https://github.com/stellar-novas/Einstein-Engines/"
 
 ## githubConfigSecret is the k8s secrets to use when auth with GitHub API.
 ## You can choose to use GitHub App or a PAT token
-githubConfigSecret:
+githubConfigSecret: arc-runners-secret
   ### GitHub Apps Configuration
   ## NOTE: IDs MUST be strings, use quotes
   #github_app_id: ""
